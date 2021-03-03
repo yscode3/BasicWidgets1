@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    tools:context=".A1_Radio">
+
+    <TextView
+        android:id="@+id/radioTitle"
+        style="@style/Widgets.Title.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/home_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/radioVerticalGroupQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/radio_vertical_title"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioTitle" />
+
+    <RadioGroup
+        android:id="@+id/coffeeRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bottom_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioVerticalGroupQuestion">
+
+        <RadioButton
+            android:id="@+id/americano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="아메리카노(Americano)" />
+
+        <RadioButton
+            android:id="@+id/espresso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="에스프레소(Espresso)" />
+
+        <RadioButton
+            android:id="@+id/cafeRatte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카페라떼(CafeLatte)" />
+
+        <RadioButton
+            android:id="@+id/caramelMacchiato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카라멜 마끼아또(Caramel Macchiato)" />
+
+        <RadioButton
+            android:id="@+id/coldBrew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="콜드브루(Cold Brew)" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/radioHorizontalGroupQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/radio_horizontal_title"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coffeeRadioGroup" />
+
+    <RadioGroup
+        android:id="@+id/dessertRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bottom_line"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioHorizontalGroupQuestion">
+
+        <RadioButton
+            android:id="@+id/kindOfCake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="케이크류" />
+
+        <RadioButton
+            android:id="@+id/kindOfSandWich"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="샌드위치류" />
+
+        <RadioButton
+            android:id="@+id/kindOfCookie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="쿠키류" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/chosenCoffeeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="선택하신 커피"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dessertRadioGroup" />
+
+    <TextView
+        android:id="@+id/chosenCoffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="아메리카노(Americano)"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chosenCoffeeTxt" />
+
+    <TextView
+        android:id="@+id/shosenDessertTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="선택하신 디저트류"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chosenCoffee" />
+
+    <TextView
+        android:id="@+id/chosenDessert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="케이크류"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shosenDessertTxt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chosenDessert"
+        tools:layout_editor_absoluteX="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="선택하신 정보가 맞다면 확인버튼을 눌러주세요."
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="확인" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

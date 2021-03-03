@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".A2_CheckBox">
+
+    <TextView
+        android:id="@+id/checkBoxTitle"
+        style="@style/Widgets.Title.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/home_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkBoxHorizontalGroupQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/checkbox_horizontal_titla"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxTitle" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bottom_line"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxHorizontalGroupQuestion">
+
+        <CheckBox
+            android:id="@+id/pc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PC" />
+
+        <CheckBox
+            android:id="@+id/xbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="XBox" />
+
+        <CheckBox
+            android:id="@+id/playStation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Play Station" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/checkBoxVerticalGroupQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/checkbox_vertical_title"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bottom_line"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxVerticalGroupQuestion">
+
+        <CheckBox
+            android:id="@+id/wow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="와우(Would Of Warcraft, MMORPG)" />
+
+        <CheckBox
+            android:id="@+id/warOfGenesis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="창세기전(War Of Genesis, RPG)" />
+
+        <CheckBox
+            android:id="@+id/counterStrike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카운터 스트라이크(Counter-Strike, FPS)" />
+
+        <CheckBox
+            android:id="@+id/superMario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="슈퍼마리오(Super Mario, Console)" />
+
+        <CheckBox
+            android:id="@+id/tekken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="철권(Tekken, Action)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resultArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shosenPlayTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="게임기 목록"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/chosenDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chosenGameTxt"
+                android:layout_width="81dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="선호하는 게임"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/chosenGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="선택하신 정보가 맞다면 확인버튼을 눌러주세요."
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="확인" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

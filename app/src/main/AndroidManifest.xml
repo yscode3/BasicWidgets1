@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="yscode.widgets">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Widgets">
+        <activity android:name=".A6_RatingBar"></activity>
+        <activity android:name=".A5_SeekBar" />
+        <activity android:name=".A4_ProgressBar" />
+        <activity android:name=".A3_Toggle_Switch" />
+        <activity android:name=".A2_CheckBox" />
+        <activity android:name=".A1_Radio" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
